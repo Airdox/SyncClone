@@ -1,0 +1,15 @@
+image: docker.io/maximofn/coqui_tts:1.0.1
+
+ports:
+  - port: 5002
+      onOpen: open-browser
+
+      tasks:
+        - name: Start Coqui TTS Server
+            command: |
+                  # Überprüfen Sie, ob der NVIDIA Container Toolkit korrekt konfiguriert ist
+                        # Dies ist oft in Gitpod-Umgebungen bereits der Fall, wenn GPU-Instanzen verwendet werden.
+                              # Wenn nicht, müssen Sie möglicherweise die Gitpod-Dokumentation für GPU-Setups konsultieren.
+                                    # Der Befehl zum Starten des Servers aus dem Dockerfile ist:
+                                          python3.6 server/server.py -c server/conf.json
+                                          
