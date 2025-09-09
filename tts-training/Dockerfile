@@ -1,4 +1,4 @@
-FROM coqui/tts:latest
+FROM ghcr.io/coqui-ai/tts-cpu:latest
 
 WORKDIR /app
 
